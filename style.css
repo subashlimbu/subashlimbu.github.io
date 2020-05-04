@@ -58,6 +58,8 @@ div.logoFlex {
     align-items: center;
   }
 
+  /* ---------NAV BAR -------- */
+
 .navbar {
     padding-bottom: 10px;
     position: fixed;
@@ -83,20 +85,30 @@ div.logoFlex {
       letter-spacing: 2px;
       /* color: rgb(241, 245, 35); */
 }
-span{
+.logo.span{
   font-weight: 700;
-  /* font-size: 30px; */
+  font-size: 30px; 
   letter-spacing: 2px;
+  color: yellow;
 }
     
 .main-nav {
     list-style-type: none;
-    display: flex;
-    flex-direction: row;
+    display: none;
+    /* flex-direction: row;
     justify-items: right;
-    float: right;
+    float: right; */
 }
   
+/* .main-nav {
+  list-style-type: none;
+  display: none;
+} */
+.main-nav.li{
+   text-align:right;
+  }
+
+
 .nav-links::after {
     content: "";
     display: block;
@@ -123,7 +135,7 @@ span{
   }
   
   nav.black{
-    background: #222222;
+    background: whitesmoke;
     position: fixed;
     width: 100%;
     padding: 10px 50px;
@@ -132,14 +144,15 @@ span{
     /* .logo, span{
       color: #ffad21;
     } */
-    /* a.active{
+
+    nav.blacka.active{
       color: skyblue;
     }
-    a.active::after {
+    nav.black.a.active::after {
       border-bottom: 2px solid #ffad21;
       width:60%;
       margin: auto;
-    } */
+    }
   
     /* ----ABOUT ME SECTION ------- */
 
@@ -337,9 +350,8 @@ div.contact div{
 
 /* //-----PORTFOLIO SECTION ------ */
 
-/* #portfolio{
-  background: linear-gradient(150deg, black, 70%, #ffad21 55%);
-  margin-bottom: 400px;
+#portfolio{
+  background: linear-gradient(150deg, rgb(6, 48, 65) 70%, #ffad21 55%);
   color: white;
 }
 
@@ -359,9 +371,6 @@ h3.space{
   #portfolio.h3{
     padding-bottom: 10px;
   }
-  img.beelogo{
-    width: 20px;
-  }
 
 
 div.img-flex img{
@@ -371,7 +380,7 @@ div.img-flex img{
 div.project{
   display: flex;
   justify-content: center;
-  padding: 60px 0 60px 0;
+  padding: 20px 0 50px 0;
 }
   h3.my-project{
     text-align: center;
@@ -383,7 +392,7 @@ div.project{
   display: flex;
   padding: 0 0 0 3.5rem;
   flex-direction: column;
-  width: 50%;
+  width: 70%;
   font-size: 17px;
 }
   img{
@@ -398,7 +407,7 @@ div.project{
   display: flex;
   padding: 0 3.5rem 0 0;
   flex-direction: column;
-  width: 50%;
+  width: 70%;
   font-size: 17px;
 }
   img{
@@ -420,8 +429,8 @@ button{
   padding: 8px 2px;
   transition: all .2s ease-in;
 }
-  a{
-    color:#ffad21;
+  a.project4, a.project3, a.project2, a.project1 {
+    color: #ffad21;
     text-decoration: none;
   }
   &:nth-child(2), &:nth-child(3){
@@ -431,26 +440,206 @@ button{
     background: #ffad21;
     border-color: #000000;
   }
-    a{
-      color: #000000;
+
+
+/* ----TABLET SCREEN----- */
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+  .main-nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+  }
+  .main-nav.li {
+        margin: 0;
+  }
+  .nav-links {
+          padding: 1rem;
+        }
+      
+  span.navbar-toggle {
+    display: none;
+  }
+}
+
+  /* ----- MOBILE SCREEN ------ */
+
+  @media only screen and (max-width: 768px) {
+    #header {
+      height: 100vh;
+      background-image: url(./images/white-concrete-building-3297593.jpg);
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
   
+    .about-me{
+      height: 100vh;
+      padding: 2rem;
+      color: black;
+      background: skyblue;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+  
+    .col-1{
+      padding: 0 10px;
+      width: 100%;
+      display:flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      line-height: 25px;
+    }
 
-
-/* div.project-title{ 
-  span:first-child{
-    font-size: 20px;
+    .col-1.h3{
+        color: #ffad21;
+        border-bottom: 1px solid #ffad21;
+        padding: 20px 0 0 5px;
+      }
+    .col-1.p:first-of-type {
+        padding: 0 0 0 0;
+      }
+    
+      /* ----CRICLE----- */
+      .circle-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+      }
+      .circle-div  .circle{
+          width: 15em;
+          height: 15em;
+          border-radius: 50%;
+          background-image: url('./images/Subash-2814-171.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+    
+    
+      /* #particles-js {
+        height: 100vh;
+        background: black;
+        display: block;
+        justify-content: center;
+        align-items: center;
+      } */
+    
+      div.project{
+        display: flex;
+        justify-content: center;
+        padding: 0 0 30px 0;
+      }
+      .project.h3.my-project{
+          text-align: center;
+          border-bottom: 1px solid #ffad21;
+      }
+    
+      .tech-col {
+        position: absolute;
+        text-align: center;
+        width: 100vw;
+        color: white;
+      }
+      .tech-col.i{
+            font-size: 10vh;
+            padding: 0 5px;
+      }
+      .tech-col.h3{
+            padding-top: 90px;
+          }
+      
+    
+      #portfolio{
+        background: linear-gradient(150deg, rgb(6, 48, 65) 70%, #ffad21 55%);
+        color: white;
+        margin-bottom: 350px;
+     }
+    
+      .portfolio-col {
+        display: block;
+        height: 950px;
+        line-height: 1.6;
+        padding-top: 25px;
+      }
+      .portfolio-col.h3{
+          padding-bottom: 10px;
+        }
+    
+      div.img-flex img{
+        border-radius: 5px;
+        width: 360px;
+        padding-left: 15px;
+      }
+    
+      div.project{
+        text-align: center;
+      }
+      .project.h3.my-project {
+          border-bottom: 1px solid #ffad21;
+          padding-top: 80px;
+          margin: 0 0 30px 0;
+          width: 73%;
+        }
+      
+    
+      .prot-flex{
+        display: block;
+        width: 100%;
+        font-size: 17px;
+        padding: 0 15px;
+      }
+        
+      .p:nth-child(2){
+          padding-bottom: 10px;
+        }
+    
+      div.img-mobile{
+        padding-top: 30px;
+      }
+    
+      footer.contact-info{
+        height: 300px;
+        position: fixed;
+        bottom:0;
+        background-image: url('./images/white-concrete-building-3297593.jpg');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        z-index: -1;
+      }
+      footer.contact-info.contact {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+        }
+        footer.contact-info.h3{
+          width:63%;
+        }
+    
+      div.contact div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 2em;
+        height: 110px;
+      }
+    
+      div.logoFlex {
+        width: 60%;
+      }
   }
-  span:nth-child(2), span:nth-child(3) {
-    padding-left: 220px;
-  }
-
-
-div.top-arrow {
-  text-align: center;
-}
-  i{
-    color: #ffad21;
-    text-decoration: none;
-    } 
-
