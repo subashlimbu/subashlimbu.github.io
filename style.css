@@ -27,14 +27,18 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+  /* text-align: center;  */
+  justify-content: center;
+  align-items: center;
 }
 
 div.logoFlex {
+  /* display: flex; */
   position: absolute;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  top: 40%;
+  /* align-items: center; */
+  /* justify-content: center; */
+  top: 45%;
   left: 25%;
   color: white;
 }
@@ -44,7 +48,6 @@ div.logoFlex {
     letter-spacing: 0.2em;
     font-size: 4rem;
     padding: 10px;
-    /* opacity: 0; */
     border-bottom: 1px solid white;
   }
   .prof {
@@ -55,11 +58,6 @@ div.logoFlex {
     padding: 1rem;
   }
   
-  i.icon {
-    color: skyblue;
-    text-decoration: none;
-
-  }
   h3.title{
     letter-spacing: 0.1em;
     font-size: 30px;
@@ -71,6 +69,8 @@ div.logoFlex {
   /* ---------NAV BAR -------- */
 
 .navbar {
+  display: flex;
+  align-items: flex-start;
   text-align: center;
   position: fixed;
   z-index: 9999;
@@ -417,7 +417,7 @@ button{
   .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 277%;
+    top: 260%;
     width: auto;
     margin: 50px;
     padding: 16px;
@@ -480,9 +480,53 @@ button{
   }
 
 
+  /* -----EDUCATION----- */
+
+  #education-area {
+    height: 510px;
+    background: whitesmoke;
+    background-attachment: fixed;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .education-container{
+    display: flex;
+    text-align: center;
+  }
+  .education-child {
+    width: 50%;
+    color: black;
+    padding: 5px 20px;
+  }
+  .vl-education {
+    border-left: 1.2px solid 	green;
+    height: 350px;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px;
+  }
+  div.education {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0 20px 0;
+  }
+
+  h3.edu {
+    text-align: center;
+    border-bottom: 1px solid green;
+    letter-spacing: 0.1em;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: green;
+    text-transform: uppercase;
+    padding-bottom: 7px;
+  }
+
 /* ----TABLET SCREEN----- */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 798px) {
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -503,7 +547,8 @@ button{
     padding: 1rem;
 }
 .logo {
-  margin-top: 0;
+  float: left;
+  /* margin-top: 0; */
 }
       
 .navbar-toggle {
@@ -519,12 +564,15 @@ button{
   /* ----- MOBILE SCREEN ------ */
 
   @media only screen and (max-width: 768px) {
-    #header {
+    section#header {
       height: 100vh;
       background-image: url(./images/Portfolio-background-3.jpg);
-      position: relative;
-      background-size: cover;
-      background-repeat: no-repeat;
+      /* position: relative; */
+      /* background-size: cover;
+      background-repeat: no-repeat; */
+      text-align: center;
+      align-items: center;
+      justify-content: center;
     }
   
     .about-me{
@@ -580,8 +628,8 @@ button{
     
       #particles-js {
         height: 100vh;
-        background: black;
-        display: block;
+        background: whitesmoke;
+        /* display: block; */
         justify-content: center;
         align-items: center;
       }
@@ -589,7 +637,7 @@ button{
       div.project{
         display: flex;
         justify-content: center;
-        padding: 0 0 30px 0;
+        padding: 20px 0 30px 0;
       }
       .project.h3.my-project{
           text-align: center;
@@ -612,14 +660,21 @@ button{
       
     
       #portfolio{
-        background: linear-gradient(150deg, rgb(6, 48, 65) 70%, #ffad21 55%);
+        height: 1210px;
+        background-image: url('./images/948892-cool-dark-wallpapers-1920x1080-windows.jpg');
         color: white;
-        margin-bottom: 350px;
+        justify-content: center;
+        align-items: center;
+        /* margin-bottom: 350px; */
      }
     
       .portfolio-col {
         display: flex;
-        height: 950px;
+        flex-direction: row;
+        width: 100%;
+        height: 800px;
+        justify-content: center;
+        align-items: center;
         line-height: 1.6;
         padding-top: 25px;
       }
@@ -628,14 +683,16 @@ button{
         }
     
       div.img-flex img{
+        display: flex;
+        width: 100%;
         border-radius: 5px;
-        width: 360px;
+        /* width: 360px; */
         padding-left: 15px;
       }
     
-      div.project{
+      /* div.project{
         text-align: center;
-      }
+      } */
       .project.h3.my-project {
           border-bottom: 1px solid #ffad21;
           padding-top: 80px;
@@ -645,10 +702,12 @@ button{
       
     
       .prot-flex{
-        display: block;
         width: 100%;
         font-size: 17px;
-        padding: 0 15px;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        /* padding: 0 15px; */
       }
         
       .p:nth-child(2){
@@ -658,10 +717,68 @@ button{
       div.img-mobile{
         padding-top: 30px;
       }
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 320%;
+        width: auto;
+        margin: 50px;
+        padding: 16px;
+        color: white;
+        background-color: rgba(0,0,0,0.8);
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 40px;
+        user-select: none;
+      }
     
+      .dots {
+        background-image: url('./images/948892-cool-dark-wallpapers-1920x1080-windows.jpg');
+      }
+        
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: orange;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+        #myBtn {
+          display: none;
+          position: fixed;
+          bottom: 20px;
+          right: 30px;
+          z-index: 99;
+          font-size: 18px;
+          width: 50px;
+          border: none;
+          outline: none;
+          background-color: black;
+          color: white;
+          cursor: pointer;
+          padding: 15px;
+          border-radius: 30px;
+        }
+        #education-area {
+          height: 100vh;
+          background: whitesmoke;
+          background-attachment: fixed;
+          justify-content: center;
+          align-items: center;
+        
+        }
+        
+        .active, .dot:hover {
+          background-color: #717171;
+        }
+
       footer.contact-info{
-        height: 300px;
-        position: fixed;
+
+
         bottom:0;
         background-image: url('./images/Portfolio-background-3.jpg');
         background-position: center;
@@ -690,7 +807,10 @@ button{
         padding: 0px 10px;
       }
     
-      div.logoFlex {
-        width: 60%;
-      }
+      /* div.logoFlex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      } */
   }
