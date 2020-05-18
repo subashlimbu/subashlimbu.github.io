@@ -187,8 +187,23 @@ h3.title{
 p:first-of-type {
   padding: 50px 0 0 0;
 }
+p:nth-child(2) {
+  padding: 50px 0 0 0;
+}
 p:nth-child(3) {
-  padding-top: 20px;
+  padding: 50px 0 0 0;
+}
+.col-1 h4 {
+  letter-spacing: 0.1em;
+  font-size: 30px;
+  font-family: 'Poppins', sans-serif;
+  color: green;
+  text-transform: uppercase;
+  border-bottom: 1px solid green;
+  padding-bottom: 7px;
+}
+.col-1 p {
+  padding: 20px;
 }
 
       /* ----CRICLE----- */
@@ -344,7 +359,7 @@ div.contact div a h4 {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 5px 30px;
-  height: 500px;
+  height: 550px;
 }
 
 div.img-flex img{
@@ -398,12 +413,13 @@ button{
   cursor: pointer;
   border-radius: 5px;
   border: 1px solid #ffad21;
-  width: 105px;
+  width: 115px;
   padding: 8px 2px;
   transition: all .2s ease-in;
 }
   a.project4, a.project3, a.project2, a.project1 {
     color: #ffad21;
+    font-size: 14px;
     text-decoration: none;
   }
   &:nth-child(2), &:nth-child(3){
@@ -417,7 +433,7 @@ button{
   .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 260%;
+    top: 305%;
     width: auto;
     margin: 50px;
     padding: 16px;
@@ -604,7 +620,7 @@ button{
         padding: 20px 0 0 5px;
       }
     .col-1.p:first-of-type {
-        padding: 0 0 0 0;
+        padding: 50px 0 0 0;
       }
     
       /* ----CRICLE----- */
